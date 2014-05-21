@@ -37,7 +37,7 @@ class myclass_test : public tsuite
 		virtual void RunTests()
 		{
 			tsuite::test_exception<runtime_error>("some bad object instantiation perhaps", [] () {
-				throw runtime_error("an example; this throwing will make this test pass");
+				throw runtime_error("an example; this exception will make this test pass");
 			});
 
 			tsuite::test("some good object instantiation perhaps", [] () {
