@@ -14,7 +14,7 @@ namespace ttester
 
 			tmain(int argc, char* argv[]);
 
-			int runalltests();
+			int RunAllTests();
 
 			static void RegisterTest(RegFunc regfunc);
 

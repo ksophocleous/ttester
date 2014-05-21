@@ -16,13 +16,13 @@ namespace ttester
 			std::string opt = argv[i];
 			if (opt.compare("--test") == 0)
 			{
-				exit(runalltests());
+				exit(RunAllTests());
 			}
 		}
 #endif
 	}
 
-	int tmain::runalltests()
+	int tmain::RunAllTests()
 	{
 		if (s_registerFunctions)
 		{
