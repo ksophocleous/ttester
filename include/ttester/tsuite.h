@@ -4,6 +4,8 @@
 #include <cstdint>
 #include <functional>
 
+#include "ttester/logger.h"
+
 namespace ttester
 {
 	class tsuite

@@ -28,7 +28,7 @@ namespace ttester
 				return std::move(out);
 			}
 
-			LogOutputCallback OnLogPrint;
+			static LogOutputCallback OnLogPrint;
 
 		protected:
 			std::ostringstream ss;
@@ -36,6 +36,7 @@ namespace ttester
 	};
 
 	std::ostream& operator<< (std::ostream& out, logger::type logtype);
+
 	inline std::ostream& operator<< (std::ostream& out, const std::exception& exception)
 	{
 		out << exception.what();
@@ -52,5 +53,17 @@ namespace ttester
 	{
 		public:
 			errorout() : logger(logger::type::error) { }
+	};
+
+	class warnout : public logger
+	{
+		public:
+			warnout() : logger(logger::type::warning) { }
+	};
+
+	class infoout : public logger
+	{
+		public:
+			infoout() : logger(logger::type::info) { }
 	};
 };

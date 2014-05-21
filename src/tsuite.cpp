@@ -1,6 +1,7 @@
 #include "ttester/tsuite.h"
 #include "ttester/tsuite_exception.h"
 #include "ttester/logger.h"
+#include "ttester/core.h"
 
 namespace ttester
 {
@@ -26,9 +27,7 @@ namespace ttester
 		{
 			m_failed++;
 			errorout() << name << " -> failed because of " << e;
-	#if defined(_DEBUG) && defined(_MSC_VER)
-			__debugbreak();
-	#endif
+			breakdebugger();
 		}
 		catch (...)
 		{

@@ -2,8 +2,12 @@
 
 #include <cstdint>
 #include <typeinfo>
+#include <functional>
+#include <vector>
 
 #include "ttester/tsuite_exception.h"
+#include "ttester/tmain.h"
+#include "ttester/logger.h"
 
 namespace ttester
 {
@@ -29,8 +33,6 @@ namespace ttester
 						errorout() << ss.str();
 					else
 						successout() << ss.str();
-
-					successout() << "";
 
 					return tstsuite.GetFailedTestCount();
 				}
