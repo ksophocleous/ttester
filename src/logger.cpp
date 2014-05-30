@@ -27,9 +27,9 @@ namespace ttester
 		switch (logtype)
 		{
 			case logger::type::success: out << "success"; return out;
-			case logger::type::info: out << "info"; return out;
-			case logger::type::warning: out << "warning"; return out;
-			case logger::type::error: out << "error"; return out;
+			case logger::type::info:	out << "info"; return out;
+			case logger::type::warning: out << "Warn"; return out;
+			case logger::type::error:	out << " ERR"; return out;
 		}
 
 		out << "unknown";
