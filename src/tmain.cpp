@@ -4,15 +4,20 @@
 #include "ttester/tsuite_exception.h"
 #include "ttester/logger.h"
 
+#include <cassert>
+
 namespace ttester
 {
 	std::vector<tmain::RegFunc>* s_registerFunctions;
 
 	tmain::tmain(int argc, char* argv[]) : m_failedSuites(0), m_succeededSuites(0)
 	{
+		assert(argc >= 0);
+
 #ifndef DISABLE_TTESTER
 		for (int i = 0; i < argc; i++)
 		{
+			
 			std::string opt = argv[i];
 			if (opt.compare("--test") == 0)
 			{
