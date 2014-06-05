@@ -5,6 +5,7 @@
 #include "ttester/logger.h"
 
 #include <cassert>
+#include <cstdlib>
 
 namespace ttester
 {
