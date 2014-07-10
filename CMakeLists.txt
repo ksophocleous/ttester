@@ -34,6 +34,7 @@ add_library(ttester ${src} ${public_hdrs})
 set_target_properties(ttester PROPERTIES
 	PUBLIC_HEADER "${public_hdrs}"
 	INCLUDE_DIRECTORIES "${include_directories}"
+	INTERFACE_INCLUDE_DIRECTORIES "${include_directories}"
 	VERSION "${version_major}.${version_minor}.${version_patch}"
 #	SOVERSION "${version_major}"
 )
